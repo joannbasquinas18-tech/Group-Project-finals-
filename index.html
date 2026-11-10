@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-PH">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111713" />
+    <title>Form &amp; Function — Gym Management</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" aria-label="Form and Function home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-copy"><strong>form<span>&amp;</span>function</strong><small>FITNESS CLUB</small></span>
+        </a>
+        <div class="side-label">MENU</div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-link active" data-page="dashboard"><span class="nav-icon">◫</span> Dashboard</button>
+          <button class="nav-link" data-page="members"><span class="nav-icon">♙</span> Members <span class="nav-count" id="memberNavCount">0</span></button>
+          <button class="nav-link" data-page="attendance"><span class="nav-icon">◷</span> Attendance</button>
+          <button class="nav-link" data-page="plans"><span class="nav-icon">◇</span> Membership plans</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="help-card">
+            <div class="help-icon">✳</div>
+            <strong>Need a hand?</strong>
+            <p>Your gym, running smoothly. Reach out to our support team.</p>
+            <a href="mailto:support@formandfunction.example">Contact support <span>↗</span></a>
+          </div>
+          <button class="profile-button" id="profileButton">
+            <span class="avatar avatar-admin">A</span>
+            <span class="profile-copy"><strong>Admin</strong><small>Administrator</small></span>
+            <span class="profile-more">···</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="pageBreadcrumb">Dashboard</strong></div>
+          <div class="topbar-actions">
+            <label class="search-box"><span aria-hidden="true">⌕</span><input id="globalSearch" type="search" placeholder="Search anything..." aria-label="Search members" /><kbd>⌘ K</kbd></label>
+            <button class="icon-button notification-button" aria-label="Notifications">♧<i></i></button>
+            <span class="today-label" id="todayLabel"></span>
+          </div>
+        </header>
+        <section class="page-content" id="pageContent" aria-live="polite"></section>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="modal-layer" id="modalLayer" hidden></div>
+    <script src="app.js"></script>
+  </body>
+</html>
